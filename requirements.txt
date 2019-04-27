@@ -1,4 +1,5 @@
 discord
 asyncio
+openpyxl
 bs4
 pip
