@@ -7,7 +7,6 @@ import datetime
 import bs4
 import urllib
 import urllib.request
-import logging
 import os
 from urllib.request import urlopen, Request
 from bs4 import BeautifulSoup
@@ -15,14 +14,6 @@ from discord import Member
 from itertools import cycle
 if not discord.opus.is_loaded():
      discord.opus.load_opus('opus')
-
-
-#Logging
-logger = logging.getLogger('discord')
-logger.setLevel(logging.DEBUG)
-handler = logging.FileHandler(filename='discord.log', encoding='utf-8', mode='w')
-handler.setFormatter(logging.Formatter('%(asctime)s:%(levelname)s:%(name)s:%(message)s'))
-logger.addHandler(handler)
 
 
 #Simplification
