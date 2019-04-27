@@ -85,7 +85,7 @@ async def on_message(message):
         embed = discord.Embed(color=0xea0000)
         embed.set_author(name='Troll Bot', icon_url=BotThumbnail)
         embed.add_field(name=':information_source: [트롤봇 명령어 목록]',
-                        value='아래는 트롤봇의 명령어 목록입니다. 띄어쓰기를 꼭 맞춰주세요!\n```\n/골라 <단어1> <단어2> …\n/주사위\n/현재시간\n/날씨 <지역명>\n/실시간검색어 또는 /실검\n/나무위키 <검색어>\n/관심\n/시공조아 또는 /시공\n```',
+                        value='아래는 트롤봇의 명령어 목록입니다. 띄어쓰기를 꼭 맞춰주세요!\n```\n/골라 <단어1> <단어2> …\n/주사위\n/현재시간\n/날씨 <지역명>\n/실시간검색어 또는 /실검\n/나무위키 <검색어>\n```',
                         inline=False)
         embed.set_footer(text='Made by Justice_Lion', icon_url=adminThumbnail)
         await client.send_message(channel, '{}'.format(mention_author))
@@ -228,21 +228,6 @@ async def on_message(message):
         await client.send_message(channel, '{}'.format(mention_author))
         await client.send_message(channel, embed=embed)
         print(BotName + ' : {}, '.format(author) + txt + ' 나무위키 링크 embed')
-
-    #Reaction 1 (Attention Seeker)
-    if message.content.startswith('/관심'):
-        print('{} : /관심'.format(author))
-        await client.send_message(channel, '{}'.format(mention_author))
-        await client.send_file(channel, "image\Reaction\grandstander.jpg")
-        print(BotName + ' : {}, image\Reaction\grandstander.jpg'.format(author))
-
-    #Reaction 2 (HOS)
-    if message.content.startswith('/시공') or message.content.startswith('/시공조아'):
-        print('{} : /시공 or /시공조아'.format(author))
-        i = random.randint(1,25)
-        await client.send_message(channel, '{}'.format(mention_author))
-        await client.send_file(channel, "image\Reaction\HOS\HOS (" + str(i) + ").gif")
-        print(BotName + ' : {}, image\Reaction\HOS\HOS ('.format(author) + str(i) + ').gif')
 
     #Test
     if message.content.startswith('/테스트'):
