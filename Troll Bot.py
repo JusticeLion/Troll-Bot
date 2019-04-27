@@ -298,5 +298,4 @@ async def on_message(message):
 
 #Background Task
 client.loop.create_task(change_status())
-TOKEN = os.environ["BOT_TOKEN"]
-client.run(TOKEN)
+client.run(str(os.environ.get('BOT_TOKEN')))
