@@ -95,15 +95,15 @@ async def on_message(message):
     #Choose One
     if message.content.startswith('/골라'):
         choice = message.content.split(' ')
-        print('{} : /골라'.format(author) + choice)
+        print('{} : /골라'.format(author) + str(choice))
         if len(choice)-1<2:
             await client.send_message(channel, '{}, 두 가지 이상의 단어를 입력해 주세요.'.format(mention_author))
             print(BotName + ' : {}, 두 가지 이상의 단어를 입력해 주세요.'.format(author))
         else:
             choicetext = random.randint(1, len(choice) - 1)
             choiceresult = choice[choicetext]
-            await client.send_message(channel, '{}, '.format(mention_author) + choiceresult)
-            print(BotName + ' : {}, '.format(author) + choiceresult)
+            await client.send_message(channel, '{}, '.format(mention_author) + str(choiceresult))
+            print(BotName + ' : {}, '.format(author) + str(choiceresult))
 
     #Dice
     if message.content.startswith('/주사위'):
