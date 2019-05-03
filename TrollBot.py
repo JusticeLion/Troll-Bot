@@ -4,14 +4,6 @@ import asyncio
 import os
 
 
-@client.event
-async def on_ready():
-    print('[Login]')
-    print('Bot Name :', client.user.name)
-    print('Bot ID :', client.user.id)
-    print("==============================")
-
-
 #Simplification
 client = discord.Client()
 
