@@ -1,6 +1,5 @@
 #Importants
 import discord
-import asyncio
 import os
 
 
