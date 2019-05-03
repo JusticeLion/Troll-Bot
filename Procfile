@@ -1,1 +1,1 @@
-worker: Troll Bot.py
+worker: TrollBot.py
